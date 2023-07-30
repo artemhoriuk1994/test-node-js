@@ -24,7 +24,6 @@ function askQuestion() {
       if (selectedOption === correctAnswer) {
         score++;
       }
-
       currentQuestion++;
       askQuestion();
     });
