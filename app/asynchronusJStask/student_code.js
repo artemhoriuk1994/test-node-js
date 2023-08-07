@@ -1,0 +1,1 @@
+getUsers().then(users => console.log(users)).catch(error => error.message)
