@@ -235,17 +235,16 @@ const questions = [
 },
 {
   id: 18, 
-  question: 'Який код використовується для створення власного виняткового класу в JavaScript?',
-  codeSnippet: `
-class CustomError extends Error {
-constructor(message) {
-  super(message);
-  this.name = 'CustomError';
-}
-}
-
-throw new CustomError('Це власний виняток');
-  `,
+  question: `Який код використовується для створення власного виняткового класу в JavaScript?
+  
+  class CustomError extends Error {
+    constructor(message) {
+      super(message);
+      this.name = 'CustomError';
+    }
+    }
+    
+    throw new CustomError('Це власний виняток'); `,
   options: [
       'throw new CustomError("Це власний виняток");',
       'throw CustomError("Це власний виняток");',
@@ -253,7 +252,7 @@ throw new CustomError('Це власний виняток');
       'new CustomError("Це власний виняток");',
       'new Error("Це власний виняток");'
   ],
-  correctAnswer: [1],
+  correctAnswer: [ 'throw new CustomError("Це власний виняток");'],
   multipleAnswer: false
 },
 {
@@ -289,7 +288,7 @@ console.log(result);
       'undefined',
       'Помилка виконання'
   ],
-  correctAnswer: ['5'], 
+  correctAnswer: ['15'], 
 multipleAnswer: false
 }
 ];
