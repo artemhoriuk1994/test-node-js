@@ -65,25 +65,27 @@ rl.on('line', (input) => {
     studentCode = input;
     studentCodeFile.write(studentCode, (err) => {
       if (err) {
-        console.error('Ошибка при сохранении кода студента:', err);
+        console.error('Помилка при збереженні коду:', err);
         process.exit(1);
       } else {
-        console.log('Код успешно сохранен в student_code.js');
-        console.log('Начинаем тестирование вашего кода...');
+        console.log('Код збережено в файл в student_code.js');
+        console.log('Починаємо тест кода...');
         testStudentCode(studentCode, testCases)
           .then((failures) => {
             if (failures === 0) {
-              console.log('Все тесты пройдены успешно!');
+              console.log('Всі тести пройдені успішно!');
             } else {
-              console.error(`Тестов не пройдено: ${failures}`);
+              console.error(`Тестів не пройдено: ${failures}`);
             }
             process.exit(0);
           })
           .catch((error) => {
-            console.error('Ошибка при выполнении тестов:', error);
+            console.error('Помилка при виконанні тестів:', error);
             process.exit(1);
           });
       }
     });
   }
 });
+
+
